@@ -1,55 +1,43 @@
 import type { Metadata } from 'next';
-import { Inspector } from 'react-dev-inspector';
 import './globals.css';
+import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
+import { FloatingCTA } from '@/components/layout/floating-cta';
 
 export const metadata: Metadata = {
   title: {
-    default: '新应用 | 扣子编程',
-    template: '%s | 扣子编程',
+    default: 'NHA Sourcing Service | Your Trusted Asia Sourcing Partner in Shanghai',
+    template: '%s | NHA Sourcing Service',
   },
   description:
-    '扣子编程是一款一站式云端 Vibe Coding 开发平台。通过对话轻松构建智能体、工作流和网站，实现从创意到上线的无缝衔接。',
+    'NHA Sourcing Service (Shanghai) Co., Ltd. — Your trusted partner for product sourcing, quality control, factory audits, and logistics across Asia. Based in Shanghai with deep access to Yangtze River Delta manufacturing.',
   keywords: [
-    '扣子编程',
-    'Coze Code',
-    'Vibe Coding',
-    'AI 编程',
-    '智能体搭建',
-    '工作流搭建',
-    '网站搭建',
-    '网站部署',
-    '全栈开发',
-    'AI 工程师',
+    'sourcing agent China',
+    'Shanghai sourcing company',
+    'Asia materials sourcing',
+    'product sourcing services',
+    'quality control China',
+    'factory audit China',
+    'China import agent',
+    'Shanghai procurement',
+    'NHA Sourcing',
+    'NHA Sourcing Service',
   ],
-  authors: [{ name: 'Coze Code Team', url: 'https://code.coze.cn' }],
-  generator: 'Coze Code',
-  // icons: {
-  //   icon: '',
-  // },
+  authors: [{ name: 'NHA Sourcing Service (Shanghai) Co., Ltd.' }],
   openGraph: {
-    title: '扣子编程 | 你的 AI 工程师已就位',
+    title: 'NHA Sourcing Service | Your Trusted Asia Sourcing Partner in Shanghai',
     description:
-      '我正在使用扣子编程 Vibe Coding，让创意瞬间上线。告别拖拽，拥抱心流。',
-    url: 'https://code.coze.cn',
-    siteName: '扣子编程',
-    locale: 'zh_CN',
+      'Professional sourcing services across Asia. Shanghai-based experts in product sourcing, quality control, factory audits, and logistics. Get your free quote today.',
     type: 'website',
-    // images: [
-    //   {
-    //     url: '',
-    //     width: 1200,
-    //     height: 630,
-    //     alt: '扣子编程 - 你的 AI 工程师',
-    //   },
-    // ],
+    locale: 'en_US',
+    siteName: 'NHA Sourcing Service',
   },
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   title: 'Coze Code | Your AI Engineer is Here',
-  //   description:
-  //     'Build and deploy full-stack applications through AI conversation. No env setup, just flow.',
-  //   // images: [''],
-  // },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NHA Sourcing Service | Your Trusted Asia Sourcing Partner',
+    description:
+      'Shanghai-based sourcing agency serving global buyers. Quality control, factory audits, and end-to-end supply chain solutions across Asia.',
+  },
   robots: {
     index: true,
     follow: true,
@@ -61,13 +49,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isDev = process.env.COZE_PROJECT_ENV === 'DEV';
-
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        {isDev && <Inspector />}
-        {children}
+      <body className="min-h-screen bg-background text-foreground antialiased">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <FloatingCTA />
       </body>
     </html>
   );

@@ -1,4 +1,8 @@
-# 项目上下文
+# AGENTS.md — NHA Sourcing Service (Shanghai) Co., Ltd.
+
+## 项目概览
+
+NHA Sourcing Service (Shanghai) Co., Ltd. 的官方 B2B 采购代理网站。面向全球买家（进口商、品牌方、电商卖家、批发商），提供产品采购、质量控制、工厂审核、物流运输、OEM/ODM 等一站式亚洲采购服务。
 
 ### 版本技术栈
 
@@ -8,58 +12,120 @@
 - **UI 组件**: shadcn/ui (基于 Radix UI)
 - **Styling**: Tailwind CSS 4
 
+### 品牌色
+
+- 主色（深海蓝）: `#0A2540` (nha-navy)
+- 辅色（商务蓝）: `#1E40AF` (nha-blue)
+- 强调色（中国红）: `#DC2626` (nha-red)
+- 金色点缀: `#D97706` (nha-gold)
+
 ## 目录结构
 
 ```
-├── public/                 # 静态资源
-├── scripts/                # 构建与启动脚本
-│   ├── build.sh            # 构建脚本
-│   ├── dev.sh              # 开发环境启动脚本
-│   ├── prepare.sh          # 预处理脚本
-│   └── start.sh            # 生产环境启动脚本
-├── src/
-│   ├── app/                # 页面路由与布局
-│   ├── components/ui/      # Shadcn UI 组件库
-│   ├── hooks/              # 自定义 Hooks
-│   ├── lib/                # 工具库
-│   │   └── utils.ts        # 通用工具函数 (cn)
-│   └── server.ts           # 自定义服务端入口
-├── next.config.ts          # Next.js 配置
-├── package.json            # 项目依赖管理
-└── tsconfig.json           # TypeScript 配置
+src/
+├── app/
+│   ├── layout.tsx              # 根布局，包含 Header/Footer/FloatingCTA
+│   ├── globals.css             # 全局样式 + Tailwind 主题
+│   ├── page.tsx                # 首页
+│   ├── about/page.tsx          # 关于我们
+│   ├── how-it-works/page.tsx   # 采购流程
+│   ├── services/               # 服务页面
+│   │   ├── page.tsx            # 服务总览
+│   │   ├── product-sourcing/   # 产品采购
+│   │   ├── quality-control/    # 质量控制
+│   │   ├── factory-audit/      # 工厂审核
+│   │   ├── logistics/          # 物流运输
+│   │   └── oem-odm/            # OEM/ODM
+│   ├── industries/page.tsx     # 行业覆盖
+│   ├── case-studies/page.tsx   # 成功案例
+│   ├── blog/page.tsx           # 博客/资源
+│   ├── contact/page.tsx        # 联系我们（含表单）
+│   ├── privacy-policy/page.tsx # 隐私政策
+│   ├── terms-of-service/page.tsx # 服务条款
+│   └── sitemap/page.tsx        # 网站地图
+├── components/
+│   ├── ui/                     # shadcn/ui 组件库
+│   ├── layout/                 # 布局组件
+│   │   ├── header.tsx          # 顶部导航（含响应式）
+│   │   ├── footer.tsx          # 底部信息
+│   │   ├── floating-cta.tsx    # 浮动 CTA（WhatsApp/电话/回顶）
+│   │   └── page-hero.tsx       # 内页通用 Hero
+│   └── sections/
+│       └── home-sections.tsx   # 首页所有区块组件
+├── hooks/                      # 自定义 Hooks
+└── lib/
+    └── utils.ts                # 通用工具函数 (cn)
 ```
 
-- 项目文件（如 app 目录、pages 目录、components 等）默认初始化到 `src/` 目录下。
+## 核心页面说明
 
-## 包管理规范
+### 首页 (/)
+- `HeroSection`: 主视觉 + 核心价值主张 + 双 CTA
+- `StatsBar`: 关键数据展示（工厂数、年数、集装箱数、成本节省、服务国家数）
+- `ServicesOverview`: 6 大服务卡片概览
+- `WhyChooseUs`: 为什么选择 NHA（6 项理由 + 客户引言）
+- `HowItWorksPreview`: 5 步流程预览
+- `IndustriesPreview`: 行业覆盖网格
+- `TestimonialsSection`: 客户评价（3 条）
+- `CTASection`: 底部行动号召
 
-**仅允许使用 pnpm** 作为包管理器，**严禁使用 npm 或 yarn**。
-**常用命令**：
-- 安装依赖：`pnpm add <package>`
-- 安装开发依赖：`pnpm add -D <package>`
-- 安装所有依赖：`pnpm install`
-- 移除依赖：`pnpm remove <package>`
+### 服务页 (/services)
+- 6 个详细服务卡片（带功能列表）
+- 4 种物流方式对比
+- 3 档定价方案（佣金制/项目制/小时咨询）
+
+### 联系页 (/contact)
+- 左侧：联系方式（邮箱/WhatsApp/电话/地址/营业时间）
+- 右侧：询价表单（12 个字段，含选择器）
+- 成功提交后的感谢页面
 
 ## 开发规范
 
 ### 编码规范
+- TypeScript strict 模式
+- 优先复用 shadcn/ui 组件（Button, Card, Badge, Input, Select 等）
+- 图标统一使用 lucide-react
+- 禁止隐式 `any`，所有函数参数标注类型
 
-- 默认按 TypeScript `strict` 心智写代码；优先复用当前作用域已声明的变量、函数、类型和导入，禁止引用未声明标识符或拼错变量名。
-- 禁止隐式 `any` 和 `as any`；函数参数、返回值、解构项、事件对象、`catch` 错误在使用前应有明确类型或先完成类型收窄，并清理未使用的变量和导入。
+### 组件约定
+- 新组件放在 `src/components/` 对应目录
+- 跨页面复用的布局组件放 `components/layout/`
+- 单页专属区块组件放 `components/sections/`
 
-### next.config 配置规范
+### 样式约定
+- 优先使用 Tailwind 工具类
+- 品牌色通过 CSS 变量定义在 `globals.css` 的 `@theme` 中
+- 色值使用：`text-nha-navy`、`bg-nha-blue`、`text-nha-red`、`text-nha-gold`
+- 动画使用 `tw-animate-css` 或自定义 `@keyframes`
+- 卡片悬浮效果统一使用 `card-hover` class
 
-- 配置的路径不要写死绝对路径，必须使用 path.resolve(__dirname, ...)、import.meta.dirname 或 process.cwd() 动态拼接。
+### 响应式
+- 移动端优先，断点：sm(640)/md(768)/lg(1024)/xl(1280)
+- 导航：桌面端水平菜单，移动端汉堡抽屉
+- 卡片网格：移动端单列 → md 双列 → lg 三列
 
-### Hydration 问题防范
+## 常用命令
 
-1. 严禁在 JSX 渲染逻辑中直接使用 typeof window、Date.now()、Math.random() 等动态数据。**必须使用 'use client' 并配合 useEffect + useState 确保动态内容仅在客户端挂载后渲染**；同时严禁非法 HTML 嵌套（如 <p> 嵌套 <div>）。
-2. **禁止使用 head 标签**，优先使用 metadata，详见文档：https://nextjs.org/docs/app/api-reference/functions/generate-metadata
-   1. 三方 CSS、字体等资源可在 `globals.css` 中顶部通过 `@import` 引入或使用 next/font
-   2. preload, preconnect, dns-prefetch 通过 ReactDOM 的 preload、preconnect、dns-prefetch 方法引入
-   3. json-ld 可阅读 https://nextjs.org/docs/app/guides/json-ld
+```bash
+pnpm install          # 安装依赖
+pnpm run dev          # 启动开发服务器
+pnpm run build        # 生产构建
+pnpm ts-check         # TypeScript 类型检查
+pnpm lint             # ESLint 检查
+```
 
-## UI 设计与组件规范 (UI & Styling Standards)
+## SEO 注意事项
 
-- 模板默认预装核心组件库 `shadcn/ui`，位于`src/components/ui/`目录下
-- Next.js 项目**必须默认**采用 shadcn/ui 组件、风格和规范，**除非用户指定用其他的组件和规范。**
+- 每个页面都有独立的 `metadata` export
+- 关键词覆盖：sourcing agent China, Shanghai sourcing company, quality control China 等
+- 页面结构清晰，H1 唯一，语义化标签
+- 所有图片（如有）需设置 alt 属性
+
+## 未来可扩展方向
+
+- 接入真实表单提交后端 (API Route)
+- CMS 集成（内容管理）
+- 多语言支持（中/英/西语等）
+- 案例研究详情页
+- 博客文章详情页 + MDX
+- Google Analytics / 转化追踪
