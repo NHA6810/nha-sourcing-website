@@ -310,7 +310,7 @@ export default function AboutPage() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <a href="mailto:info@nhasourcing.com">Send Email</a>
+              <a href="mailto:13816334552@139.com">Send Email</a>
             </Button>
           </div>
         </div>

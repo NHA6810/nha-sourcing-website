@@ -166,7 +166,7 @@ export function Header() {
               <Link href="/contact">Get Free Quote</Link>
             </Button>
             <Button asChild size="sm" className="bg-nha-green hover:bg-nha-green-dark text-white">
-              <Link href="mailto:info@nhasourcing.com">Email Us</Link>
+              <Link href="mailto:13816334552@139.com">Email Us</Link>
             </Button>
           </div>
 
@@ -223,7 +223,7 @@ export function Header() {
                 <Link href="/contact">Get Free Quote</Link>
               </Button>
               <Button asChild variant="outline" className="w-full">
-                <a href="mailto:info@nhasourcing.com">Email Us</a>
+                <a href="mailto:13816334552@139.com">Email Us</a>
               </Button>
             </div>
           </div>

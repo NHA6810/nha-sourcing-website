@@ -261,7 +261,7 @@ export default function CaseStudiesPage() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <a href="mailto:info@nhasourcing.com">Email Our Team</a>
+              <a href="mailto:13816334552@139.com">Email Our Team</a>
             </Button>
           </div>
         </div>

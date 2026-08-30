@@ -376,7 +376,7 @@ export default function ServicesPage() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <a href="mailto:info@nhasourcing.com">Email Us Directly</a>
+              <a href="mailto:13816334552@139.com">Email Us Directly</a>
             </Button>
           </div>
         </div>

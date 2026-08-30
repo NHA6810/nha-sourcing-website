@@ -55,7 +55,7 @@ export default function PrivacyPolicyPage() {
             <p>
               You have the right to access, correct, or delete your personal
               information. To exercise these rights, please contact us at
-              info@nhasourcing.com.
+              13816334552@139.com.
             </p>
 
             <h2>6. Cookies</h2>
@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
             <h2>7. Contact Us</h2>
             <p>
               If you have any questions about this Privacy Policy, please contact us
-              at info@nhasourcing.com.
+              at 13816334552@139.com.
             </p>
           </Card>
 

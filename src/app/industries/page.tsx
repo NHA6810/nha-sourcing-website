@@ -286,7 +286,7 @@ export default function IndustriesPage() {
                   variant="outline"
                   className="border-white/30 text-white hover:bg-white/10"
                 >
-                  <a href="mailto:info@nhasourcing.com">Email Our Team</a>
+                  <a href="mailto:13816334552@139.com">Email Our Team</a>
                 </Button>
               </div>
             </div>

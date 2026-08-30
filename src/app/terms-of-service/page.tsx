@@ -71,7 +71,7 @@ export default function TermsOfServicePage() {
             <h2>7. Contact</h2>
             <p>
               For questions about these Terms, please contact us at
-              info@nhasourcing.com.
+              13816334552@139.com.
             </p>
           </Card>
 
