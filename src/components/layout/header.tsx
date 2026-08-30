@@ -96,10 +96,10 @@ export function Header() {
               />
             </div>
             <div className="hidden sm:block">
-              <div className={`font-bold text-base lg:text-lg ${isScrolled ? 'text-nha-navy' : 'text-nha-navy'}`}>
+              <div className={`font-bold text-base lg:text-lg ${isScrolled ? 'text-nha-navy' : 'text-white'}`}>
                 NHA Sourcing
               </div>
-              <div className={`text-xs ${isScrolled ? 'text-gray-500' : 'text-gray-500'}`}>
+              <div className={`text-xs ${isScrolled ? 'text-gray-500' : 'text-white/70'}`}>
                 Service (Shanghai) Co., Ltd.
               </div>
             </div>
@@ -117,8 +117,12 @@ export function Header() {
                     <button
                       className={`px-3 py-2 text-sm font-medium transition-colors flex items-center gap-1 ${
                         pathname === link.href || pathname.startsWith(link.href + '/')
-                          ? 'text-nha-blue'
-                          : 'text-gray-700 hover:text-nha-navy'
+                          ? isScrolled
+                            ? 'text-nha-blue'
+                            : 'text-white'
+                          : isScrolled
+                            ? 'text-gray-700 hover:text-nha-navy'
+                            : 'text-white/80 hover:text-white'
                       }`}
                     >
                       {link.label}
@@ -149,8 +153,12 @@ export function Header() {
                     href={link.href}
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
                       pathname === link.href
-                        ? 'text-nha-blue'
-                        : 'text-gray-700 hover:text-nha-navy'
+                        ? isScrolled
+                          ? 'text-nha-blue'
+                          : 'text-white'
+                        : isScrolled
+                          ? 'text-gray-700 hover:text-nha-navy'
+                          : 'text-white/80 hover:text-white'
                     }`}
                   >
                     {link.label}
@@ -162,7 +170,16 @@ export function Header() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Button asChild variant="outline" size="sm" className="border-nha-navy/20 text-nha-navy hover:bg-nha-navy/5">
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className={`transition-colors ${
+                isScrolled
+                  ? 'border-nha-navy/20 text-nha-navy hover:bg-nha-navy/5'
+                  : 'border-white/40 text-white hover:bg-white/10 hover:border-white'
+              }`}
+            >
               <Link href="/contact">Get Free Quote</Link>
             </Button>
             <Button asChild size="sm" className="bg-nha-green hover:bg-nha-green-dark text-white">
@@ -172,7 +189,9 @@ export function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="xl:hidden p-2 -mr-2 text-gray-700"
+            className={`xl:hidden p-2 -mr-2 transition-colors ${
+              isScrolled ? 'text-gray-700' : 'text-white'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
