@@ -95,7 +95,7 @@ export default function QualityControlPage() {
             Book a quality inspection or set up a recurring QC program.
             Get a same-day quote.
           </p>
-          <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+          <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
             <Link href="/contact">
               Get Inspection Quote
               <ArrowRight className="w-4 h-4 ml-2" />

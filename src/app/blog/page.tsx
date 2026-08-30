@@ -190,7 +190,7 @@ export default function BlogPage() {
                     {featuredPost.author}
                   </span>
                 </div>
-                <Button asChild className="bg-nha-red hover:bg-nha-red-dark">
+                <Button asChild className="bg-nha-green hover:bg-nha-green-dark">
                   <a href="#">
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -329,7 +329,7 @@ export default function BlogPage() {
                 </p>
                 <div className="space-y-3">
                   <Input placeholder="Your email address" type="email" />
-                  <Button className="w-full bg-nha-red hover:bg-nha-red-dark text-sm">
+                  <Button className="w-full bg-nha-green hover:bg-nha-green-dark text-sm">
                     Subscribe
                   </Button>
                 </div>
@@ -353,7 +353,7 @@ export default function BlogPage() {
             your specific sourcing questions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+            <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
               <Link href="/contact">
                 Talk to an Expert
                 <ArrowRight className="w-4 h-4 ml-2" />

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   TrendingDown,
   Clock,
@@ -23,148 +24,103 @@ export const metadata = {
 
 const caseStudies = [
   {
-    title: '28% Cost Reduction for UK Retail Brand',
-    category: 'Cost Savings',
-    client: 'Horizon Goods Ltd.',
-    country: 'United Kingdom',
-    industry: 'Home & Garden',
-    duration: '3 months',
-    image: '',
-    metrics: [
-      { label: 'Cost Reduction', value: '28%', icon: TrendingDown },
-      { label: 'Lead Time', value: '-15%', icon: Clock },
-      { label: 'Defect Rate', value: '95% ↓', icon: ShieldCheck },
-    ],
-    challenge:
-      'A UK-based home goods retailer was sourcing through a middleman and paying too much. Quality was inconsistent and communication was slow. They needed a reliable direct sourcing solution that could cut costs without sacrificing quality.',
-    solution:
-      'NHA identified 5 direct factories in Zhejiang province, conducted full factory audits, and negotiated direct pricing. We set up a multi-layer QC process and assigned a dedicated account manager for weekly updates.',
-    results: [
-      '28% reduction in landed cost vs. previous supplier',
-      'Defect rate dropped from 8% to under 0.4%',
-      'Lead time reduced from 45 days to 38 days',
-      'Direct factory relationship with full transparency',
-      'Client has re-ordered 6 times since initial order',
-    ],
-  },
-  {
-    title: 'Full Supply Chain Overhaul for US E-commerce',
-    category: 'Quality & Efficiency',
-    client: 'Pacific Brands Co.',
-    country: 'United States',
-    industry: 'Consumer Electronics',
-    duration: '6 months',
-    metrics: [
-      { label: 'SKUs Sourced', value: '120+', icon: Building2 },
-      { label: 'QC Pass Rate', value: '99.2%', icon: ShieldCheck },
-      { label: 'Avg. Savings', value: '22%', icon: TrendingDown },
-    ],
-    challenge:
-      'A fast-growing US e-commerce brand was juggling 8 different suppliers with inconsistent quality, frequent stockouts, and no unified quality control. They needed a single partner to consolidate their supply chain.',
-    solution:
-      'NHA consolidated their 120+ SKU sourcing under our management. We vetted and on-boarded 15 primary factories, set up uniform QC standards, and established a Shanghai consolidation warehouse for combined shipments.',
-    results: [
-      '120+ SKUs now sourced through single partner',
-      'Overall QC pass rate of 99.2%',
-      'Average 22% savings across product lines',
-      'Consolidation reduced shipping cost by 30%',
-      'Client grew revenue 4x in first year',
-    ],
-  },
-  {
-    title: 'From Concept to Shelf: OEM Product Launch',
-    category: 'OEM / Product Development',
-    client: 'Nordic Home AB',
+    title: 'Full Supply Chain Establishment for Swedish Gas Control Company',
+    category: 'Complete Sourcing Solution',
+    client: 'Swedish Gas Control Company',
     country: 'Sweden',
-    industry: 'Furniture & Decor',
-    duration: '5 months',
+    industry: 'Industrial Gas Equipment',
+    duration: 'Ongoing (10+ years)',
+    image: '/images/products/regulators.png',
     metrics: [
-      { label: 'Time to Market', value: '5 mo', icon: Clock },
-      { label: 'Factories Audited', value: '7', icon: Building2 },
-      { label: 'First Order', value: '10k+', icon: TrendingDown },
+      { label: 'Cost Savings', value: '30-70%', icon: TrendingDown },
+      { label: 'Products', value: '200+', icon: Building2 },
+      { label: 'Partnership', value: '10+ yrs', icon: Clock },
     ],
     challenge:
-      'A Swedish design brand wanted to launch a new furniture line but had no existing manufacturing relationships in Asia. They needed help with everything from factory selection to tooling, samples, and production ramp-up.',
+      'A leading Swedish gas control company needed to establish a complete supply chain in China for their gas control components. They required high-quality precision parts at competitive prices, with reliable long-term suppliers.',
     solution:
-      'NHA guided the full product development cycle — from design review and material selection to factory identification, tooling management, prototype iteration, and final production setup with QC protocols.',
+      'NHA Sourcing established the entire supply chain from scratch. We identified and vetted specialized manufacturers for brass, copper, stainless steel parts, plastic components, hot and cold forging, stamping, aluminum casting and forging, tooling, regulators, and cutting & welding nozzles. We implemented strict quality control protocols and built long-term relationships with key vendors.',
     results: [
-      'Successfully launched 12 SKU furniture line',
-      'First 10,000 unit order delivered on schedule',
-      'Design iteration and testing in 5 months total',
-      'Factory passed all EU safety and quality standards',
-      'Client now in 3rd production run',
+      'Complete supply chain established with 200+ product SKUs',
+      'Cost savings ranging from 30% to 70% across product lines',
+      'Key vendors have been working with the client for around 10 years',
+      'Consistent quality with ISO 9000 compliant manufacturing',
+      'Dedicated team managing all sourcing, QC, and logistics',
     ],
   },
   {
-    title: 'Quality Crisis Resolution for German Importer',
-    category: 'Quality Control',
-    client: 'AlpenTrading GmbH',
-    country: 'Germany',
-    industry: 'Hardware & Tools',
-    duration: '2 months',
+    title: 'Massive Cost Reduction for World-Class Pulp Maker from Brazil',
+    category: 'Industrial Procurement',
+    client: 'Global Pulp Manufacturer',
+    country: 'Brazil',
+    industry: 'Pulp & Paper Industry',
+    duration: 'Ongoing',
+    image: '/images/products/lime-kiln.png',
     metrics: [
-      { label: 'Return Rate', value: '90% ↓', icon: ShieldCheck },
-      { label: 'Inspections', value: 'Full', icon: TrendingDown },
-      { label: 'Recovery Time', value: '8 wks', icon: Clock },
+      { label: 'Cost Savings', value: '40-60%', icon: TrendingDown },
+      { label: 'Equipment', value: 'Full Range', icon: Building2 },
+      { label: 'Project Scale', value: 'Very Large', icon: ShieldCheck },
     ],
     challenge:
-      'A German hardware importer was facing a quality crisis — 15% of products were being returned due to defects. Their current supplier refused to take responsibility and communication had broken down.',
+      'One of the largest pulp makers in the world needed to source chemical products for pulp and paper making, packing wires, and new project construction products including motors, lime kiln, pressure containers, generators, steel structures, and boilers from China. The scale was massive and required managing multiple specialized suppliers.',
     solution:
-      'NHA conducted an immediate factory audit and root cause analysis. We identified process gaps and worked with the factory to implement corrective actions. We then set up full pre-shipment inspection for every order.',
+      'NHA Sourcing managed the full procurement of chemical products, packing materials, and heavy industrial equipment. We identified and audited specialized manufacturers for each product category, negotiated volume pricing, managed production timelines across multiple suppliers, and coordinated logistics for large-scale project deliveries.',
     results: [
-      'Return rate dropped from 15% to 1.5%',
-      'Full quality control process implemented',
-      'Factory improved quality systems and training',
-      'Client saved €200K+ in replacement costs',
-      'Relationship with factory restored and improved',
+      'Total cost savings of approximately 40-60%',
+      'Successfully sourced chemical products and packing wires',
+      'Delivered complete project construction equipment: motors, lime kiln, pressure containers, generators, steel structures, boilers',
+      'Managed multiple specialized suppliers across different regions',
+      'On-time delivery for large-scale construction projects',
     ],
   },
   {
-    title: 'Amazon FBA Supply Chain Optimization',
-    category: 'Logistics & FBA',
-    client: 'Sunrise Brands Inc.',
-    country: 'Canada',
-    industry: 'Beauty & Personal Care',
-    duration: '4 months',
+    title: 'Supply Chain Build for Leading Plastic Equipment Parts Supplier',
+    category: 'Industrial Components',
+    client: 'Xaloy / Nordson Xaloy',
+    country: 'USA',
+    industry: 'Plastic Machinery & Equipment',
+    duration: 'Ongoing',
+    image: '/images/products/screw-barrels.png',
     metrics: [
-      { label: 'Logistics Cost', value: '-25%', icon: TrendingDown },
-      { label: 'FBA Prep', value: 'Included', icon: ShieldCheck },
-      { label: 'Stockouts', value: 'Eliminated', icon: Clock },
+      { label: 'Cost Savings', value: '30-70%', icon: TrendingDown },
+      { label: 'Components', value: 'Full Range', icon: Building2 },
+      { label: 'Quality', value: 'Precision', icon: ShieldCheck },
     ],
     challenge:
-      'A Canadian Amazon seller was dealing with high logistics costs, frequent stockouts, and issues with FBA prep requirements. They needed a partner who understood Amazon FBA and could optimize their entire supply chain.',
+      'A leading parts supplier for plastic equipment (Xaloy / Nordson Xaloy) needed to establish a complete supply chain in China for precision components used in plastic machinery. High precision and material quality were critical for these industrial components.',
     solution:
-      'NHA set up FBA-ready packaging and labeling at our Shanghai warehouse, implemented a rolling 3-month production schedule to avoid stockouts, and negotiated better freight rates through volume consolidation.',
+      'NHA Sourcing established the complete supply chain for the full range of plastic equipment parts including steel bars, tungsten carbide powder, metal parts, cast parts, mixers, stainless steel parts, welding parts, hydraulic power units, and electrical control systems. We identified specialist manufacturers, conducted rigorous material testing, and set up precision quality inspection protocols.',
     results: [
-      'Logistics costs reduced by 25%',
-      'Zero stockouts in 12 months of cooperation',
-      'FBA acceptance rate of 99.8%',
-      'Inventory turnover improved by 40%',
-      'Client expanded from 5 to 20 products',
+      'Complete supply chain established for Xaloy / Nordson Xaloy',
+      'Cost savings of more than 30-70% across product lines',
+      'Precision components meeting international quality standards',
+      'Wide range of parts: steel bars, WC powder, castings, weldments, HPU systems',
+      'Reliable long-term manufacturing partnerships',
     ],
   },
   {
-    title: 'Multi-Country Sourcing Strategy Setup',
-    category: 'Strategic Sourcing',
-    client: 'Global Trading Partners',
-    country: 'Australia',
-    industry: 'Apparel & Textiles',
-    duration: '4 months',
+    title: 'Automotive & Motorcycle Parts Sourcing Program',
+    category: 'Automotive Components',
+    client: 'Multiple Automotive Clients',
+    country: 'Global',
+    industry: 'Automotive & Motorcycle',
+    duration: 'Multi-year',
+    image: '/images/products/auto-part-1.png',
     metrics: [
-      { label: 'Factories Onboarded', value: '12', icon: Building2 },
-      { label: 'Countries', value: '3', icon: MapPin },
-      { label: 'Tariff Savings', value: '$500K+/yr', icon: TrendingDown },
+      { label: 'Parts Range', value: '50+ types', icon: Building2 },
+      { label: 'Quality Grade', value: 'OEM-level', icon: ShieldCheck },
+      { label: 'Vendors', value: 'High-Quality', icon: TrendingDown },
     ],
     challenge:
-      'An Australian trading group wanted to diversify their sourcing base beyond China due to tariff concerns. They needed reliable alternative sourcing in Vietnam and Bangladesh while maintaining quality and delivery standards.',
+      'Automotive and motorcycle product buyers needed reliable sourcing for a wide range of precision components including machining parts, cast parts, forging parts, sheet metal parts, plastic parts, connectors, ignition coils, various motors, brakes (disc, drum), controllers, attachments, and absorbers. Quality and consistency are critical in the automotive industry.',
     solution:
-      'NHA conducted a full sourcing strategy review. We identified and vetted 5 factories in Vietnam and 4 in Bangladesh, set up uniform quality standards, and established a multi-country sourcing portfolio.',
+      'NHA Sourcing leveraged our many years of experience in the automotive sector to build a network of high-quality vendors. We implement the same rigorous sourcing procedures — supplier verification, factory audits, sample approval, production monitoring, and pre-shipment inspection — to guarantee goods quality and on-time delivery.',
     results: [
-      '12 factories across 3 countries onboarded',
-      'Estimated $500K+ annual tariff savings',
-      'Diversified supply chain reduces risk',
-      'Uniform QC standards across all factories',
-      'Client now uses China+Vietnam+Bangladesh mix',
+      '50+ types of automotive and motorcycle components sourced',
+      'Accumulated many high-quality vendors in the automotive industry',
+      'Comprehensive quality control from pre-production to pre-shipment',
+      'Parts include: machining, casting, forging, sheet metal, plastic, connectors, ignition coils, motors, brakes, controllers, absorbers',
+      'Guaranteed quality and on-time delivery',
     ],
   },
 ];
@@ -187,6 +143,16 @@ export default function CaseStudiesPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (
               <Card key={index} className="card-hover border-gray-200 overflow-hidden">
+                {study.image && (
+                  <div className="relative h-48 bg-gray-100 overflow-hidden">
+                    <Image
+                      src={study.image}
+                      alt={study.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
                 <div className="p-6 lg:p-8">
                   <div className="flex items-center gap-2 mb-4">
                     <Badge className="bg-nha-blue/10 text-nha-blue border-nha-blue/20">
@@ -288,7 +254,7 @@ export default function CaseStudiesPage() {
             Let&apos;s discuss how we can help you achieve your sourcing goals.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+            <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
               <Link href="/contact">
                 Start Your Project
                 <ArrowRight className="w-4 h-4 ml-2" />

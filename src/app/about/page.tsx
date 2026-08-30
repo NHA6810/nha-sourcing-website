@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   MapPin,
   Building2,
@@ -8,13 +9,16 @@ import {
   HandshakeIcon,
   Award,
   Target,
-  Clock,
   Languages,
   BadgePercent,
   CheckCircle2,
   ArrowRight,
   Building,
   Factory,
+  PackageSearch,
+  ClipboardList,
+  FileCheck2,
+  Settings2,
 } from 'lucide-react';
 import { PageHero } from '@/components/layout/page-hero';
 import { Card } from '@/components/ui/card';
@@ -24,7 +28,7 @@ import { Button } from '@/components/ui/button';
 export const metadata = {
   title: 'About Us',
   description:
-    'Learn about NHA Sourcing Service (Shanghai) Co., Ltd. — a Shanghai-based sourcing agency with 15+ years of experience connecting global buyers with quality Asian manufacturers.',
+    'NHA Sourcing Industrial Co., Ltd. — a leading sourcing agent in China headquartered in Shanghai. Over 10 years of experience helping global buyers source quality products at the lowest cost.',
 };
 
 export default function AboutPage() {
@@ -33,10 +37,10 @@ export default function AboutPage() {
       <PageHero
         breadcrumb="About Us"
         eyebrow="About NHA Sourcing"
-        title="Your Shanghai-Based Partner for Asia Sourcing"
-        description="Founded and headquartered in Shanghai, NHA Sourcing Service connects international buyers with verified manufacturers across Asia. We bridge language gaps, manage quality, and reduce risk so you can focus on growing your business."
-        primaryCta={{ text: 'Meet Our Team', href: '#team' }}
-        secondaryCta={{ text: 'Contact Us', href: '/contact' }}
+        title="Your Success Is Our Business"
+        description="NHA Sourcing Industrial Co., Ltd. is a leading sourcing agent in China, dedicated to helping companies source products from China with the best quality, regulatory compliance, and at the lowest cost. Headquartered in Shanghai — China's biggest city and industrial hub."
+        primaryCta={{ text: 'Start Sourcing Today', href: '/contact' }}
+        secondaryCta={{ text: 'View Our Services', href: '/services' }}
       />
 
       {/* Story */}
@@ -45,82 +49,49 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <Badge className="mb-4 bg-nha-blue/10 text-nha-blue border-nha-blue/20">
-                Our Story
+                Who We Are
               </Badge>
               <h2 className="text-3xl lg:text-4xl font-bold text-nha-navy mb-6">
-                Built on Trust, Rooted in Shanghai
+                A Leading Sourcing Agent in China
               </h2>
               <div className="space-y-5 text-gray-600 leading-relaxed">
                 <p>
-                  NHA Sourcing Service (Shanghai) Co., Ltd. was founded with a
-                  clear mission: to make Asia sourcing accessible, transparent,
-                  and reliable for businesses of all sizes around the world.
+                  NHA Sourcing Industrial Co., Ltd. is a leading sourcing agent
+                  in China, dedicated to helping all kinds of companies to
+                  source products from China, to ensure the best quality,
+                  regulatory complied and at the lowest cost.
                 </p>
                 <p>
-                  Based in the Pudong district of Shanghai — at the very heart
-                  of the Yangtze River Delta, China&apos;s most advanced
-                  manufacturing region — we leverage our strategic location and
-                  deep local network to deliver exceptional value to our clients.
+                  Our sourcing services include: product sourcing, price
+                  negotiation, supplier verification, factory audit, production
+                  monitoring, lab testing, order follow-up, quality control,
+                  quality inspection, logistics support and more.
                 </p>
                 <p>
-                  Our team of sourcing professionals combines decades of
-                  experience in manufacturing, quality control, international
-                  trade, and supply chain management. We speak your language
-                  and we understand the local market — that&apos;s what makes
-                  the difference.
+                  We provide complete service for some world-famous companies
+                  as a turnkey basis sourcing to have huge cost savings.
                 </p>
                 <p>
-                  Today, we serve clients across North America, Europe,
-                  Australia, and beyond, helping them source quality products
-                  at competitive prices while minimizing risk and maximizing
-                  efficiency.
+                  We are well experienced in China manufacturing and familiar
+                  with Chinese culture, which is certainly important for
+                  business success in China. We have been working on sourcing
+                  for more than ten years.
                 </p>
               </div>
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-nha-navy to-nha-navy-light rounded-3xl p-8 lg:p-10 text-white relative overflow-hidden">
-                <div className="absolute inset-0 nha-grid-pattern opacity-20" />
-                <div className="relative">
-                  <div className="w-16 h-16 bg-nha-gold/20 rounded-2xl flex items-center justify-center mb-6">
-                    <Building2 className="w-8 h-8 text-nha-gold" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-6">Our Shanghai Advantage</h3>
-                  <div className="space-y-4">
-                    {[
-                      {
-                        icon: MapPin,
-                        title: 'Strategic Location',
-                        desc: 'Pudong, Shanghai — minutes from the world\'s busiest port',
-                      },
-                      {
-                        icon: Factory,
-                        title: 'Yangtze Delta Access',
-                        desc: 'Direct access to China\'s densest manufacturing cluster',
-                      },
-                      {
-                        icon: Globe2,
-                        title: 'Global Connectivity',
-                        desc: 'Shanghai Pudong Airport + Port of Shanghai = global reach',
-                      },
-                      {
-                        icon: Users,
-                        title: 'Local Expertise',
-                        desc: 'Bilingual team with deep supplier relationships',
-                      },
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <item.icon className="w-5 h-5 text-nha-gold" />
-                        </div>
-                        <div>
-                          <div className="font-semibold mb-0.5">{item.title}</div>
-                          <div className="text-sm text-gray-400">{item.desc}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/company/team-photo.png"
+                  alt="NHA Sourcing team and facilities"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-nha-navy text-white rounded-xl p-5 shadow-2xl">
+                <div className="text-3xl font-bold text-nha-green">10+</div>
+                <div className="text-sm text-gray-300">Years of Sourcing Experience</div>
               </div>
             </div>
           </div>
@@ -131,8 +102,8 @@ export default function AboutPage() {
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge className="mb-4 bg-nha-red/10 text-nha-red border-nha-red/20">
-              Mission & Values
+            <Badge className="mb-4 bg-nha-green/10 text-nha-green border-nha-green/20">
+              Mission &amp; Values
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-nha-navy mb-4">
               What Drives Us
@@ -183,32 +154,44 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose Us Details */}
-      <section className="py-20 lg:py-28 bg-white" id="team">
+      {/* What We Do / Approach */}
+      <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <Badge className="mb-4 bg-nha-gold/10 text-nha-gold border-nha-gold/20">
-                Our Team
+              <Badge className="mb-4 bg-nha-blue/10 text-nha-blue border-nha-blue/20">
+                Our Approach
               </Badge>
               <h2 className="text-3xl lg:text-4xl font-bold text-nha-navy mb-6">
-                Experienced Professionals,
-                <br />
-                Dedicated to Your Success
+                Bridging the East-West Gap
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Our team brings together expertise in manufacturing, quality
-                assurance, international trade, and supply chain management.
-                Every client is assigned a dedicated account manager who
-                serves as your single point of contact.
+                We are a sourcing company that believes sourcing &amp; QC
+                doesn&apos;t need to be so archaic in the 21st century, so we
+                are on a mission to change how sourcing is done using the power
+                of technology.
               </p>
+
+              <div className="space-y-5 text-gray-600 leading-relaxed mb-8">
+                <p>
+                  With over 50 combined years of Sourcing, Project Management
+                  &amp; QC experience dealing with Chinese suppliers and a
+                  fully bilingual team with enough sourcing experience
+                  background, you can be sure you&apos;re in good hands.
+                </p>
+                <p>
+                  Our highly trained team is familiar with all the latest
+                  industry technology as well as our own custom software,
+                  created to specifically fit the needs of e-commerce sellers.
+                </p>
+              </div>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: 'Team Members', value: '25+' },
-                  { label: 'Years Avg. Experience', value: '10+ yrs' },
-                  { label: 'Languages Spoken', value: '5+' },
-                  { label: 'Countries Served', value: '30+' },
+                  { label: 'Combined Experience', value: '50+ yrs' },
+                  { label: 'Industries Served', value: '10+' },
+                  { label: 'Cost Savings Range', value: '30-70%' },
+                  { label: 'Avg. Response Time', value: '< 24h' },
                 ].map((stat, index) => (
                   <div key={index} className="bg-gray-50 rounded-xl p-5">
                     <div className="text-2xl font-bold text-nha-navy mb-1">
@@ -223,29 +206,29 @@ export default function AboutPage() {
             <div className="space-y-5">
               {[
                 {
-                  name: 'Bilingual Project Managers',
-                  desc: 'Fluent in English and Chinese, your dedicated PM handles all communication.',
+                  name: 'End-to-End Sourcing',
+                  desc: 'We handle everything from supplier selection to shipping — a complete turnkey service.',
+                  icon: PackageSearch,
+                },
+                {
+                  name: 'Full Project Management',
+                  desc: 'We provide full project management oversight to protect you against import risks, particularly quality risks.',
+                  icon: ClipboardList,
+                },
+                {
+                  name: 'Transparent Reporting',
+                  desc: 'The full reports we provide facilitate your involvement while keeping you focused on your core business.',
+                  icon: FileCheck2,
+                },
+                {
+                  name: 'Bilingual Team',
+                  desc: 'Fully bilingual team with deep knowledge of Chinese business culture and Western company standards.',
                   icon: Languages,
                 },
                 {
-                  name: 'QC Inspectors on the Ground',
-                  desc: 'Our inspectors are at factories within hours, not days.',
-                  icon: ShieldCheck,
-                },
-                {
-                  name: 'Supply Chain Experts',
-                  desc: 'Deep industry knowledge across electronics, apparel, home goods, and more.',
-                  icon: Building,
-                },
-                {
-                  name: 'Logistics Specialists',
-                  desc: 'Experienced with sea, air, rail, and complex cross-border shipping.',
-                  icon: Globe2,
-                },
-                {
-                  name: 'Client-First Culture',
-                  desc: 'We measure success by your satisfaction and long-term partnership.',
-                  icon: HandshakeIcon,
+                  name: 'Technology-Driven',
+                  desc: 'Custom software and the latest industry technology to ensure efficiency and accuracy.',
+                  icon: Settings2,
                 },
               ].map((item, index) => (
                 <div
@@ -320,7 +303,7 @@ export default function AboutPage() {
             Sourcing can help your business succeed.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+            <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
               <Link href="/contact">
                 Contact Us Today
                 <ArrowRight className="w-4 h-4 ml-2" />

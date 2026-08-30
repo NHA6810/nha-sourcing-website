@@ -110,7 +110,7 @@ export default function LogisticsPage() {
             Get a competitive shipping quote from our logistics team.
             We work with major carriers for the best rates and reliability.
           </p>
-          <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+          <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
             <Link href="/contact">
               Request Shipping Quote
               <ArrowRight className="w-4 h-4 ml-2" />

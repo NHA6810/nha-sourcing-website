@@ -119,7 +119,7 @@ export default function ProductSourcingPage() {
             Tell us what you need and we&apos;ll start sourcing immediately.
             Free consultation, no obligation.
           </p>
-          <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+          <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
             <Link href="/contact">
               Request Free Sourcing Quote
               <ArrowRight className="w-4 h-4 ml-2" />

@@ -346,7 +346,7 @@ export default function ServicesPage() {
                   asChild
                   className={`w-full ${
                     plan.highlighted
-                      ? 'bg-nha-red hover:bg-nha-red-dark'
+                      ? 'bg-nha-green hover:bg-nha-green-dark'
                       : 'bg-nha-navy hover:bg-nha-navy-light'
                   }`}
                 >
@@ -369,7 +369,7 @@ export default function ServicesPage() {
             Free consultation, no obligation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+            <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
               <Link href="/contact">
                 Get Free Consultation
                 <ArrowRight className="w-4 h-4 ml-2" />

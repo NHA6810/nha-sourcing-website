@@ -55,12 +55,14 @@
     'Noto Serif SC', 'Songti SC', 'SimSun', ui-serif, Georgia, Cambria,
     'Times New Roman', Times, serif;
 
-  /* NHA Brand Colors */
+  /* NHA Brand Colors - derived from official logo */
   --color-nha-navy: #0A2540;
   --color-nha-navy-light: #1E3A5F;
   --color-nha-blue: #1E40AF;
+  --color-nha-green: #00A651;
+  --color-nha-green-dark: #008A42;
+  --color-nha-magenta: #D91A9C;
   --color-nha-red: #DC2626;
-  --color-nha-red-dark: #B91C1C;
   --color-nha-gold: #D97706;
   --color-nha-slate: #64748B;
 }

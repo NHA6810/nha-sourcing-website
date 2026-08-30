@@ -96,8 +96,8 @@ export default function ContactPage() {
               <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
                 <Link href="/">Back to Homepage</Link>
               </Button>
-              <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
-                <a href="mailto:info@nhasourcing.com">
+              <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
+                <a href="mailto:13816334552@139.com">
                   <Mail className="w-4 h-4 mr-2" />
                   Email Us Directly
                 </a>
@@ -116,7 +116,7 @@ export default function ContactPage() {
         eyebrow="Get in Touch"
         title="Let&apos;s Talk About Your Sourcing Needs"
         description="Fill out the form below and our Shanghai-based team will get back to you within 24 hours with a detailed response. No obligation, just honest advice."
-        primaryCta={{ text: 'info@nhasourcing.com', href: 'mailto:info@nhasourcing.com' }}
+        primaryCta={{ text: '13816334552@139.com', href: 'mailto:13816334552@139.com' }}
       />
 
       <section className="py-20 lg:py-28 bg-white">
@@ -143,8 +143,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-nha-navy mb-1">Email</h3>
-                    <a href="mailto:info@nhasourcing.com" className="text-sm text-gray-600 hover:text-nha-blue transition-colors">
-                      info@nhasourcing.com
+                    <a href="mailto:13816334552@139.com" className="text-sm text-gray-600 hover:text-nha-blue transition-colors">
+                      13816334552@139.com
                     </a>
                     <p className="text-xs text-gray-400 mt-1">Reply within 24 hours</p>
                   </div>
@@ -158,8 +158,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-nha-navy mb-1">WhatsApp / WeChat</h3>
-                    <p className="text-sm text-gray-600">+86 13X XXXX XXXX</p>
-                    <p className="text-xs text-gray-400 mt-1">Fastest response</p>
+                    <p className="text-sm text-gray-600">+86 138 1633 4552</p>
+                    <p className="text-xs text-gray-400 mt-1">Fastest response — WhatsApp / WeChat</p>
                   </div>
                 </div>
               </Card>
@@ -171,8 +171,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-nha-navy mb-1">Phone</h3>
-                    <a href="tel:+86-21-XXXX-XXXX" className="text-sm text-gray-600 hover:text-nha-blue transition-colors">
-                      +86 21 XXXX XXXX
+                    <a href="tel:+8613816334552" className="text-sm text-gray-600 hover:text-nha-blue transition-colors">
+                      +86 138 1633 4552
                     </a>
                     <p className="text-xs text-gray-400 mt-1">Mon–Sat, 9AM–6PM GMT+8</p>
                   </div>
@@ -187,11 +187,13 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-nha-navy mb-1">Office Address</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      Unit XX, XX Building
+                      Contact Person: Norton Han
                       <br />
-                      Pudong New Area
+                      Unit 501, No. 24, Lane 790
                       <br />
-                      Shanghai 200120, China
+                      Lao Humin Road, Xuhui District
+                      <br />
+                      Shanghai, China
                     </p>
                   </div>
                 </div>
@@ -441,7 +443,7 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full md:w-auto bg-nha-red hover:bg-nha-red-dark px-10 h-12 text-base"
+                    className="w-full md:w-auto bg-nha-green hover:bg-nha-green-dark px-10 h-12 text-base"
                   >
                     <Send className="w-4 h-4 mr-2" />
                     Send Inquiry

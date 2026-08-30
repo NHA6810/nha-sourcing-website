@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight,
   CheckCircle2,
@@ -42,33 +43,38 @@ export function HeroSection() {
 
       {/* Decorative blobs */}
       <div className="absolute top-20 -left-20 w-96 h-96 bg-nha-blue/30 rounded-full blur-3xl opacity-50" />
-      <div className="absolute bottom-10 right-0 w-[500px] h-[500px] bg-nha-red/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-0 w-[500px] h-[500px] bg-nha-green/10 rounded-full blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="animate-fade-in-up">
             <Badge className="mb-6 bg-white/10 text-white border-white/20 backdrop-blur-sm">
-              <Sparkles className="w-3.5 h-3.5 mr-1.5 text-nha-gold" />
-              Trusted Shanghai Sourcing Partner
+              <Sparkles className="w-3.5 h-3.5 mr-1.5 text-nha-green" />
+              Leading Sourcing Agent in China
             </Badge>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Your Trusted Partner for{' '}
-              <span className="text-nha-gold">Sourcing Materials & Services</span>{' '}
-              Across Asia
+              Your Success Is{' '}
+              <span className="text-nha-green">Our Business</span>
             </h1>
 
-            <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Based in Shanghai — the heart of Asia&apos;s manufacturing powerhouse.
-              We help global buyers source quality products, reduce costs by 10–20%,
-              and mitigate supply chain risks with end-to-end support.
+            <p className="text-lg text-gray-300 mb-4 max-w-xl leading-relaxed">
+              NHA Sourcing Industrial Co., Ltd. — a leading sourcing agent in China,
+              dedicated to helping companies source products from China with the best
+              quality, regulatory compliance, and at the lowest cost.
+            </p>
+
+            <p className="text-base text-gray-400 mb-8 max-w-xl leading-relaxed">
+              Headquartered in Shanghai, we bring over 10 years of manufacturing
+              experience and deep Chinese market expertise to deliver turnkey
+              sourcing solutions that drive significant cost savings.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-10">
               <Button
                 asChild
                 size="lg"
-                className="bg-nha-red hover:bg-nha-red-dark text-white px-8 h-12 text-base shadow-lg shadow-nha-red/20"
+                className="bg-nha-green hover:bg-nha-green-dark text-white px-8 h-12 text-base shadow-lg shadow-nha-green/20"
               >
                 <Link href="/contact">
                   Get Free Quote
@@ -101,80 +107,74 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right side - Visual */}
+          {/* Right side - Real product showcase */}
           <div className="relative hidden lg:block">
             <div className="relative w-full aspect-[4/5] max-w-md mx-auto">
-              {/* Main card */}
-              <div className="absolute inset-0 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-6">
-                <div className="w-full h-full rounded-2xl bg-gradient-to-br from-nha-navy-light/50 to-nha-navy flex items-center justify-center relative overflow-hidden">
-                  {/* Stylized port/skyline illustration */}
-                  <div className="absolute inset-0 flex items-end justify-center pb-12">
-                    {/* Container stacks */}
-                    <div className="flex items-end gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="flex flex-col gap-1">
-                          {[...Array(3 + i)].map((_, j) => (
-                            <div
-                              key={j}
-                              className={`w-8 h-5 rounded-sm ${
-                                (i + j) % 3 === 0
-                                  ? 'bg-nha-red/60'
-                                  : (i + j) % 3 === 1
-                                  ? 'bg-nha-blue/60'
-                                  : 'bg-nha-gold/60'
-                              }`}
-                            />
-                          ))}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+              {/* Main product image card */}
+              <div className="absolute top-0 left-0 w-4/5 aspect-[4/3] bg-white rounded-2xl shadow-2xl overflow-hidden border border-white/20 p-2">
+                <div className="w-full h-full rounded-xl overflow-hidden bg-gray-100 relative">
+                  <Image
+                    src="/images/products/product-banner.png"
+                    alt="NHA Sourcing - Quality industrial products sourced from China"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
 
-                  {/* Ship silhouette */}
-                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-64 h-4 bg-white/20 rounded-full" />
+              {/* Secondary image 1 */}
+              <div className="absolute top-[38%] -right-2 w-[45%] aspect-square bg-white rounded-2xl shadow-2xl overflow-hidden border border-white/20 p-2 animate-float">
+                <div className="w-full h-full rounded-xl overflow-hidden bg-gray-50 relative">
+                  <Image
+                    src="/images/products/regulators.png"
+                    alt="Gas regulators - precision engineered components"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
 
-                  {/* Floating stats cards */}
-                  <div className="absolute top-8 -left-6 bg-white rounded-xl shadow-xl p-4 animate-float">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                        <ShieldCheck className="w-5 h-5 text-green-600" />
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold text-nha-navy">100%</div>
-                        <div className="text-xs text-gray-500">QC Inspection</div>
-                      </div>
-                    </div>
+              {/* Stats card */}
+              <div className="absolute bottom-[20%] -left-4 bg-white rounded-xl shadow-xl p-4 animate-float">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                    <TrendingDown className="w-5 h-5 text-nha-green" />
                   </div>
+                  <div>
+                    <div className="text-lg font-bold text-nha-navy">30-70%</div>
+                    <div className="text-xs text-gray-500">Cost Savings</div>
+                  </div>
+                </div>
+              </div>
 
-                  <div
-                    className="absolute top-20 -right-6 bg-white rounded-xl shadow-xl p-4 animate-float"
-                    style={{ animationDelay: '1s' }}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <TrendingDown className="w-5 h-5 text-blue-600" />
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold text-nha-navy">10-20%</div>
-                        <div className="text-xs text-gray-500">Cost Savings</div>
-                      </div>
-                    </div>
+              {/* Quality badge */}
+              <div
+                className="absolute bottom-4 right-4 bg-white rounded-xl shadow-xl p-4 animate-float"
+                style={{ animationDelay: '1s' }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <ShieldCheck className="w-5 h-5 text-nha-blue" />
                   </div>
+                  <div>
+                    <div className="text-sm font-bold text-nha-navy">ISO 9000</div>
+                    <div className="text-xs text-gray-500">Standards</div>
+                  </div>
+                </div>
+              </div>
 
-                  <div
-                    className="absolute bottom-24 -right-2 bg-white rounded-xl shadow-xl p-4 animate-float"
-                    style={{ animationDelay: '2s' }}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
-                        <Award className="w-5 h-5 text-amber-600" />
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold text-nha-navy">ISO</div>
-                        <div className="text-xs text-gray-500">Certified</div>
-                      </div>
-                    </div>
-                  </div>
+              {/* Third product image */}
+              <div
+                className="absolute bottom-0 left-8 w-[40%] aspect-[4/3] bg-white rounded-2xl shadow-2xl overflow-hidden border border-white/20 p-2"
+                style={{ animationDelay: '0.5s' }}
+              >
+                <div className="w-full h-full rounded-xl overflow-hidden bg-gray-50 relative">
+                  <Image
+                    src="/images/products/screw-barrels.png"
+                    alt="Screw barrels - industrial components"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -187,11 +187,11 @@ export function HeroSection() {
 
 export function StatsBar() {
   const stats = [
-    { icon: Factory, value: '500+', label: 'Verified Factories' },
-    { icon: Users, value: '15+', label: 'Years Experience' },
-    { icon: Container, value: '10,000+', label: 'Containers Shipped' },
-    { icon: BadgePercent, value: '10-20%', label: 'Avg. Cost Savings' },
-    { icon: Globe2, value: '30+', label: 'Countries Served' },
+    { icon: Users, value: '10+', label: 'Years Experience' },
+    { icon: Factory, value: '200+', label: 'Verified Factories' },
+    { icon: BadgePercent, value: '30-70%', label: 'Cost Savings' },
+    { icon: Globe2, value: '5+', label: 'Countries Served' },
+    { icon: ShieldCheck, value: 'ISO', label: '9000 Standards' },
   ];
 
   return (
@@ -359,7 +359,7 @@ export function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <Badge className="mb-4 bg-nha-red/10 text-nha-red border-nha-red/20">
+            <Badge className="mb-4 bg-nha-green/10 text-nha-green border-nha-green/20">
               Why Choose NHA
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-nha-navy mb-6">
@@ -499,7 +499,7 @@ export function HowItWorksPreview() {
         </div>
 
         <div className="text-center mt-12">
-          <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+          <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
             <Link href="/how-it-works">
               Learn More About Our Process
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -664,7 +664,7 @@ export function CTASection() {
         <div className="bg-nha-navy rounded-3xl p-10 lg:p-16 text-center relative overflow-hidden">
           <div className="absolute inset-0 nha-grid-pattern opacity-30" />
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-nha-blue/20 rounded-full blur-3xl" />
-          <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-nha-red/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-nha-green/10 rounded-full blur-3xl" />
 
           <div className="relative">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -680,7 +680,7 @@ export function CTASection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-nha-red hover:bg-nha-red-dark text-white px-8 h-14 text-base"
+                className="bg-nha-green hover:bg-nha-green-dark text-white px-8 h-14 text-base"
               >
                 <Link href="/contact">
                   Request Free Quote

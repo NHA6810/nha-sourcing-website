@@ -1,19 +1,15 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
-  Smartphone,
-  Home,
-  Shirt,
-  Baby,
-  Sofa,
   Wrench,
-  Package,
-  Box,
-  Utensils,
-  Palette,
-  Gamepad2,
-  ShoppingBag,
-  ArrowRight,
   Factory,
+  Car,
+  Flame,
+  Cog,
+  Droplets,
+  Box,
+  Activity,
+  ArrowRight,
   CheckCircle2,
 } from 'lucide-react';
 import { PageHero } from '@/components/layout/page-hero';
@@ -29,184 +25,132 @@ export const metadata = {
 
 const industries = [
   {
-    icon: Smartphone,
-    title: 'Consumer Electronics',
-    supplierCount: '80+ Suppliers',
+    icon: Wrench,
+    title: 'Industrial Products & Hardware',
+    supplierCount: '100+ Factories',
+    image: '/images/products/cutting-blades.png',
     description:
-      'From gadgets and accessories to smart home devices and audio equipment, we source quality electronics from certified manufacturers.',
+      'Comprehensive sourcing of industrial hardware, cutting tools, machining components, and precision parts with strict quality standards.',
     products: [
-      'Smartphones & accessories',
-      'Audio & headphones',
-      'Smart home devices',
-      'Wearables & fitness trackers',
-      'Chargers & cables',
+      'Cutting blades & tools',
+      'Brass & copper components',
+      'Stainless steel parts',
+      'Fasteners & hardware',
+      'Hand & power tools',
     ],
     color: 'blue',
   },
   {
-    icon: Home,
-    title: 'Home & Garden',
-    supplierCount: '120+ Suppliers',
+    icon: Droplets,
+    title: 'Gas Control Equipment',
+    supplierCount: '15+ Specialized',
+    image: '/images/products/regulators.png',
     description:
-      'Everything for the home — kitchenware, bedding, decor, furniture, and outdoor living products from leading Chinese factories.',
+      'Complete supply chain for gas control products including regulators, torches, nozzles, and precision gas handling components.',
     products: [
-      'Kitchen & dining',
-      'Bedding & textiles',
-      'Home decor & lighting',
-      'Garden & outdoor',
-      'Storage & organization',
+      'Gas regulators',
+      'Welding & cutting torches',
+      'Nozzles & testing equipment',
+      'Regulator assemblies',
+      'Gas control components',
     ],
     color: 'green',
   },
   {
-    icon: Shirt,
-    title: 'Apparel & Textiles',
-    supplierCount: '90+ Suppliers',
+    icon: Car,
+    title: 'Automotive & Motorcycle Parts',
+    supplierCount: '40+ Factories',
+    image: '/images/products/auto-part-1.png',
     description:
-      'Clothing, footwear, and textile products from factories across China, Vietnam, and Bangladesh with verified compliance.',
+      'Wide range of automotive and motorcycle components from machining parts and castings to complete assemblies with OEM-level quality.',
     products: [
-      'Fashion apparel',
-      'Sportswear & activewear',
-      'Footwear & accessories',
-      'Home textiles',
-      'Fabric & materials',
-    ],
-    color: 'pink',
-  },
-  {
-    icon: Baby,
-    title: 'Toys & Gifts',
-    supplierCount: '70+ Suppliers',
-    description:
-      'Toys, games, promotional gifts, and novelty items from factories in the Yiwu and Shantou manufacturing hubs.',
-    products: [
-      'Educational toys',
-      'Plastic & plush toys',
-      'Promotional gifts',
-      'Stationery & crafts',
-      'Party supplies',
-    ],
-    color: 'amber',
-  },
-  {
-    icon: Sofa,
-    title: 'Furniture & Decor',
-    supplierCount: '60+ Suppliers',
-    description:
-      'Indoor and outdoor furniture, lighting, and home decor items from Foshan and other furniture manufacturing centers.',
-    products: [
-      'Living room furniture',
-      'Office furniture',
-      'Outdoor furniture',
-      'Lighting fixtures',
-      'Home decor items',
-    ],
-    color: 'orange',
-  },
-  {
-    icon: Wrench,
-    title: 'Hardware & Tools',
-    supplierCount: '85+ Suppliers',
-    description:
-      'Hand tools, power tools, hardware, and industrial supplies from established manufacturers in the Zhejiang and Guangdong regions.',
-    products: [
-      'Hand tools',
-      'Power tools',
-      'Building materials',
-      'Fasteners & hardware',
-      'Safety equipment',
+      'Machining & cast parts',
+      'Forging & sheet metal',
+      'Brakes (disc & drum)',
+      'Ignition coils & motors',
+      'Controllers & absorbers',
     ],
     color: 'slate',
   },
   {
-    icon: Package,
-    title: 'Packaging Materials',
-    supplierCount: '50+ Suppliers',
+    icon: Activity,
+    title: 'Plastic Equipment & Machinery',
+    supplierCount: '20+ Specialized',
+    image: '/images/products/screw-barrels.png',
     description:
-      'Custom packaging solutions — boxes, bags, labels, and printing services to make your products stand out on the shelf.',
+      'Precision components for plastic machinery including screw barrels, tungsten carbide powder, and hydraulic power units.',
     products: [
-      'Custom boxes & cartons',
-      'Plastic packaging',
-      'Paper bags & boxes',
-      'Labels & stickers',
-      'Gift packaging',
+      'Screw barrels',
+      'Tungsten carbide powder',
+      'Mixers & extruder parts',
+      'Hydraulic power units',
+      'Electrical control systems',
+    ],
+    color: 'amber',
+  },
+  {
+    icon: Flame,
+    title: 'Pulp & Paper Industry',
+    supplierCount: '25+ Factories',
+    image: '/images/products/lime-kiln.png',
+    description:
+      'Industrial equipment and chemical products for pulp and paper manufacturing, including lime kilns, pressure vessels, and generators.',
+    products: [
+      'Chemical products for pulp',
+      'Packing wires',
+      'Lime kiln equipment',
+      'Pressure containers',
+      'Generators & boilers',
+    ],
+    color: 'orange',
+  },
+  {
+    icon: Factory,
+    title: 'Hospital & Medical Equipment',
+    supplierCount: '18+ Certified',
+    image: '/images/products/turbine-generator.png',
+    description:
+      'Medical and hospital equipment sourcing with compliance verification and regulatory adherence for international markets.',
+    products: [
+      'Hospital equipment',
+      'Medical devices',
+      'Lab & testing instruments',
+      'Healthcare supplies',
+      'Certified manufacturing',
+    ],
+    color: 'teal',
+  },
+  {
+    icon: Cog,
+    title: 'Tooling & Machine Parts',
+    supplierCount: '30+ Precision',
+    image: '/images/products/gear-inspection.png',
+    description:
+      'Custom tooling, molds, and precision machine parts — from design and prototyping to full production with quality inspection.',
+    products: [
+      'Custom tooling & molds',
+      'Plastic machine parts',
+      'Precision machining',
+      'Gear & transmission parts',
+      'Prototype development',
     ],
     color: 'purple',
   },
   {
     icon: Box,
-    title: 'Plastic & Rubber',
-    supplierCount: '65+ Suppliers',
+    title: 'Aluminum & Metal Casting',
+    supplierCount: '20+ Foundries',
+    image: '/images/products/aluminum-casting.png',
     description:
-      'Injection molding, extrusion, silicone products, and rubber components with full tooling and design support.',
+      'Aluminum pressure casting, forging, and metal fabrication with full quality control and material testing capabilities.',
     products: [
-      'Injection molded parts',
-      'Silicone products',
-      'Rubber components',
-      'Plastic sheets & films',
-      'Custom mold design',
-    ],
-    color: 'teal',
-  },
-  {
-    icon: Utensils,
-    title: 'Food & Beverage',
-    supplierCount: '45+ Suppliers',
-    description:
-      'Food products, beverages, ingredients, and packaging from certified factories with proper export documentation.',
-    products: [
-      'Snacks & confectionery',
-      'Beverages & drinks',
-      'Food ingredients',
-      'Kitchenware',
-      'Food packaging',
+      'Aluminum pressure casting',
+      'Hot & cold forging',
+      'Stamping & sheet metal',
+      'Brass & copper casting',
+      'Steel structure components',
     ],
     color: 'red',
-  },
-  {
-    icon: Palette,
-    title: 'Beauty & Personal Care',
-    supplierCount: '55+ Suppliers',
-    description:
-      'Cosmetics, skincare, hair care, and personal care products with private label and OEM/ODM capabilities.',
-    products: [
-      'Skincare products',
-      'Makeup & cosmetics',
-      'Hair care',
-      'Personal care tools',
-      'Beauty accessories',
-    ],
-    color: 'rose',
-  },
-  {
-    icon: Gamepad2,
-    title: 'Sports & Outdoors',
-    supplierCount: '50+ Suppliers',
-    description:
-      'Sporting goods, fitness equipment, outdoor gear, and recreational products from quality-focused manufacturers.',
-    products: [
-      'Fitness equipment',
-      'Sporting goods',
-      'Camping & hiking',
-      'Water sports',
-      'Yoga & wellness',
-    ],
-    color: 'emerald',
-  },
-  {
-    icon: ShoppingBag,
-    title: 'Retail & Promotional',
-    supplierCount: '75+ Suppliers',
-    description:
-      'Retail merchandise, promotional products, point-of-sale displays, and marketing materials for brands and retailers.',
-    products: [
-      'Promotional merchandise',
-      'Retail displays',
-      'Custom premiums',
-      'Gift sets',
-      'Point-of-sale materials',
-    ],
-    color: 'indigo',
   },
 ];
 
@@ -244,46 +188,66 @@ export default function IndustriesPage() {
             {industries.map((industry, index) => {
               const colors = colorMap[industry.color];
               return (
-                <Card key={index} className="card-hover p-6 lg:p-8 border-gray-200 overflow-hidden">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`w-14 h-14 ${colors.light} rounded-2xl flex items-center justify-center`}>
-                      <industry.icon className={`w-7 h-7 ${colors.text}`} />
+                <Card key={index} className="card-hover border-gray-200 overflow-hidden">
+                  {industry.image && (
+                    <div className="relative h-44 bg-gray-50 overflow-hidden">
+                      <Image
+                        src={industry.image}
+                        alt={industry.title}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute bottom-4 left-5 right-5">
+                        <h3 className="text-lg font-bold text-white">
+                          {industry.title}
+                        </h3>
+                      </div>
                     </div>
-                    <Badge variant="outline" className="text-xs border-gray-200 text-gray-500">
-                      <Factory className="w-3 h-3 mr-1.5" />
-                      {industry.supplierCount}
-                    </Badge>
-                  </div>
+                  )}
+                  <div className="p-6 lg:p-7">
+                    <div className="flex items-start justify-between mb-3">
+                      <div className={`w-10 h-10 ${colors.light} rounded-xl flex items-center justify-center`}>
+                        <industry.icon className={`w-5 h-5 ${colors.text}`} />
+                      </div>
+                      <Badge variant="outline" className="text-xs border-gray-200 text-gray-500">
+                        <Factory className="w-3 h-3 mr-1.5" />
+                        {industry.supplierCount}
+                      </Badge>
+                    </div>
 
-                  <h3 className="text-xl font-semibold text-nha-navy mb-3">
-                    {industry.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-5">
-                    {industry.description}
-                  </p>
+                    {!industry.image && (
+                      <h3 className="text-xl font-semibold text-nha-navy mb-3">
+                        {industry.title}
+                      </h3>
+                    )}
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {industry.description}
+                    </p>
 
-                  <div className="border-t border-gray-100 pt-5">
-                    <h4 className="text-sm font-semibold text-nha-navy mb-3">
-                      Popular Products
-                    </h4>
-                    <ul className="space-y-2">
-                      {industry.products.map((product, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                          <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                          {product}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    <div className="border-t border-gray-100 pt-4">
+                      <h4 className="text-sm font-semibold text-nha-navy mb-2.5">
+                        Popular Products
+                      </h4>
+                      <ul className="space-y-1.5">
+                        {industry.products.map((product, i) => (
+                          <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-nha-green flex-shrink-0 mt-0.5" />
+                            {product}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                  <div className="mt-6 pt-5 border-t border-gray-100">
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center text-nha-blue font-medium text-sm hover:text-nha-navy transition-colors"
-                    >
-                      Source this category
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center text-nha-blue font-medium text-sm hover:text-nha-navy transition-colors"
+                      >
+                        Source this category
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </Link>
+                    </div>
                   </div>
                 </Card>
               );
@@ -310,7 +274,7 @@ export default function IndustriesPage() {
                 the right suppliers for you.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+                <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
                   <Link href="/contact">
                     Tell Us What You Need
                     <ArrowRight className="w-4 h-4 ml-2" />

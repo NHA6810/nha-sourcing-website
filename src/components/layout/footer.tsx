@@ -34,25 +34,25 @@ export function Footer() {
             </p>
             <div className="flex flex-col gap-3 text-sm">
               <a
-                href="mailto:info@nhasourcing.com"
+                href="mailto:13816334552@139.com"
                 className="flex items-center gap-3 hover:text-white transition-colors group"
               >
                 <Mail className="w-4 h-4 text-nha-gold group-hover:scale-110 transition-transform" />
-                info@nhasourcing.com
+                13816334552@139.com
               </a>
               <a
                 href="tel:+86-21-XXXX-XXXX"
                 className="flex items-center gap-3 hover:text-white transition-colors group"
               >
                 <Phone className="w-4 h-4 text-nha-gold group-hover:scale-110 transition-transform" />
-                +86 21 XXXX XXXX
+                +86 138 1633 4552
               </a>
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-nha-gold mt-0.5 flex-shrink-0" />
                 <div className="text-gray-400">
                   Unit XX, XX Building
                   <br />
-                  Pudong New Area, Shanghai 200120
+                  Xuhui District, Shanghai
                   <br />
                   People&apos;s Republic of China
                 </div>

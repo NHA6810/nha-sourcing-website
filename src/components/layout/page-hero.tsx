@@ -56,7 +56,7 @@ export function PageHero({
             {primaryCta && (
               <Link
                 href={primaryCta.href}
-                className="inline-flex items-center justify-center h-12 px-8 bg-nha-red hover:bg-nha-red-dark text-white font-medium rounded-lg transition-all shadow-lg shadow-nha-red/20"
+                className="inline-flex items-center justify-center h-12 px-8 bg-nha-green hover:bg-nha-green-dark text-white font-medium rounded-lg transition-all shadow-lg shadow-nha-green/20"
               >
                 {primaryCta.text}
               </Link>

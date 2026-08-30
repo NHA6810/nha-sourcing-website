@@ -122,7 +122,7 @@ export default function FactoryAuditPage() {
             Schedule a factory audit and get a complete picture before you place
             your order. Reports delivered within 48 hours of the audit.
           </p>
-          <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+          <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
             <Link href="/contact">
               Schedule Factory Audit
               <ArrowRight className="w-4 h-4 ml-2" />

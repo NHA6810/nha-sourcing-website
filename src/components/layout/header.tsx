@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
@@ -68,13 +69,13 @@ export function Header() {
             </span>
           </div>
           <div className="flex items-center gap-6">
-            <a href="tel:+86-21-XXXX-XXXX" className="flex items-center gap-2 hover:text-nha-gold transition-colors">
+            <a href="tel:+8613816334552" className="flex items-center gap-2 hover:text-nha-green transition-colors">
               <Phone className="w-3.5 h-3.5" />
-              +86 21 XXXX XXXX
+              +86 138 1633 4552
             </a>
-            <a href="mailto:info@nhasourcing.com" className="flex items-center gap-2 hover:text-nha-gold transition-colors">
+            <a href="mailto:13816334552@139.com" className="flex items-center gap-2 hover:text-nha-green transition-colors">
               <Mail className="w-3.5 h-3.5" />
-              info@nhasourcing.com
+              13816334552@139.com
             </a>
           </div>
         </div>
@@ -85,8 +86,14 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-10 h-10 lg:w-11 lg:h-11 bg-nha-navy rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg lg:text-xl tracking-tight">NHA</span>
+            <div className="w-10 h-10 lg:w-12 lg:h-12 relative">
+              <Image
+                src="/images/company/nha-logo.png"
+                alt="NHA Sourcing Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="hidden sm:block">
               <div className={`font-bold text-base lg:text-lg ${isScrolled ? 'text-nha-navy' : 'text-nha-navy'}`}>
@@ -158,7 +165,7 @@ export function Header() {
             <Button asChild variant="outline" size="sm" className="border-nha-navy/20 text-nha-navy hover:bg-nha-navy/5">
               <Link href="/contact">Get Free Quote</Link>
             </Button>
-            <Button asChild size="sm" className="bg-nha-red hover:bg-nha-red-dark text-white">
+            <Button asChild size="sm" className="bg-nha-green hover:bg-nha-green-dark text-white">
               <Link href="mailto:info@nhasourcing.com">Email Us</Link>
             </Button>
           </div>

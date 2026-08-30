@@ -340,7 +340,7 @@ export default function HowItWorksPage() {
             get back with recommendations within 24 hours.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+            <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
               <Link href="/contact">
                 Request Free Quote
                 <ArrowRight className="w-4 h-4 ml-2" />

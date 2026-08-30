@@ -35,7 +35,7 @@ export default function OemOdmPage() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge className="mb-4 bg-nha-red/10 text-nha-red border-nha-red/20">
+            <Badge className="mb-4 bg-nha-green/10 text-nha-red border-nha-green/20">
               Development Process
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-nha-navy mb-4">
@@ -110,7 +110,7 @@ export default function OemOdmPage() {
             Let&apos;s discuss your product and explore manufacturing options.
             Free consultation — no obligation.
           </p>
-          <Button asChild size="lg" className="bg-nha-red hover:bg-nha-red-dark">
+          <Button asChild size="lg" className="bg-nha-green hover:bg-nha-green-dark">
             <Link href="/contact">
               Start Your Project
               <ArrowRight className="w-4 h-4 ml-2" />
