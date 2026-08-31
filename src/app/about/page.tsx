@@ -28,7 +28,7 @@ import { Button } from '@/components/ui/button';
 export const metadata = {
   title: 'About Us',
   description:
-    'NHA Sourcing Industrial Co., Ltd. — a leading sourcing agent in China headquartered in Shanghai. Over 10 years of experience helping global buyers source quality products at the lowest cost.',
+    'NHA Sourcing Industrial Co., Ltd. — a leading sourcing agent in China & Asia, headquartered in Shanghai. Over 10 years of experience helping global buyers source quality products at the lowest cost.',
 };
 
 export default function AboutPage() {
@@ -38,7 +38,7 @@ export default function AboutPage() {
         breadcrumb="About Us"
         eyebrow="About NHA Sourcing"
         title="Your Success Is Our Business"
-        description="NHA Sourcing Industrial Co., Ltd. is a leading sourcing agent in China, dedicated to helping companies source products from China with the best quality, regulatory compliance, and at the lowest cost. Headquartered in Shanghai — China's biggest city and industrial hub."
+        description="NHA Sourcing Industrial Co., Ltd. is a leading sourcing agent in China & Asia, dedicated to helping companies source products from China with the best quality, regulatory compliance, and at the lowest cost. Headquartered in Shanghai — China's biggest city and industrial hub."
         primaryCta={{ text: 'Start Sourcing Today', href: '/contact' }}
         secondaryCta={{ text: 'View Our Services', href: '/services' }}
       />
@@ -52,13 +52,13 @@ export default function AboutPage() {
                 Who We Are
               </Badge>
               <h2 className="text-3xl lg:text-4xl font-bold text-nha-navy mb-6">
-                A Leading Sourcing Agent in China
+                A Leading Sourcing Agent in China &amp; Asia
               </h2>
               <div className="space-y-5 text-gray-600 leading-relaxed">
                 <p>
                   NHA Sourcing Industrial Co., Ltd. is a leading sourcing agent
-                  in China, dedicated to helping all kinds of companies to
-                  source products from China, to ensure the best quality,
+                  in China &amp; Asia, dedicated to helping all kinds of companies to
+                  source products from Asia, to ensure the best quality,
                   regulatory complied and at the lowest cost.
                 </p>
                 <p>

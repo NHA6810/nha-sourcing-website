@@ -50,7 +50,7 @@ export function HeroSection() {
           <div className="animate-fade-in-up">
             <Badge className="mb-6 bg-white/10 text-white border-white/20 backdrop-blur-sm">
               <Sparkles className="w-3.5 h-3.5 mr-1.5 text-nha-green" />
-              Leading Sourcing Agent in China
+              Leading Sourcing Agent in China &amp; Asia
             </Badge>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -59,7 +59,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-lg text-gray-300 mb-4 max-w-xl leading-relaxed">
-              NHA Sourcing Industrial Co., Ltd. — a leading sourcing agent in China,
+              NHA Sourcing Industrial Co., Ltd. — a leading sourcing agent in China &amp; Asia,
               dedicated to helping companies source products from China with the best
               quality, regulatory compliance, and at the lowest cost.
             </p>
