@@ -85,22 +85,22 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-40 h-14 lg:w-48 lg:h-16 relative">
+          <Link href="/" className="flex items-center gap-2 lg:gap-3 -ml-2">
+            <div className="w-44 h-14 lg:w-56 lg:h-20 relative">
               <Image
                 src="/images/company/nha-logo.png"
                 alt="NHA Sourcing Logo"
                 fill
-                sizes="(max-width: 768px) 160px, 192px"
+                sizes="(max-width: 768px) 176px, 224px"
                 className="object-contain"
                 priority
               />
             </div>
             <div className="hidden sm:block">
-              <div className={`font-bold text-lg lg:text-xl ${isScrolled ? 'text-nha-navy' : 'text-white'}`}>
+              <div className={`font-bold text-base lg:text-xl ${isScrolled ? 'text-nha-navy' : 'text-white'}`}>
                 NHA Sourcing
               </div>
-              <div className={`text-xs lg:text-sm ${isScrolled ? 'text-gray-500' : 'text-white/70'}`}>
+              <div className={`text-[10px] lg:text-xs whitespace-nowrap ${isScrolled ? 'text-gray-500' : 'text-white/70'}`}>
                 Service (Shanghai) Co., Ltd.
               </div>
             </div>
