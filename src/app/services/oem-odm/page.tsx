@@ -17,7 +17,7 @@ import { Button } from '@/components/ui/button';
 export const metadata = {
   title: 'OEM / ODM / Custom Product Development',
   description:
-    'Bring your product ideas to life with OEM/ODM manufacturing in China. From design and prototyping to mass production — NHA Sourcing manages the entire process.',
+    'Bring your product ideas to life with OEM/ODM manufacturing in China & Asia. From design and prototyping to mass production — NHA Sourcing manages the entire process.',
 };
 
 export default function OemOdmPage() {

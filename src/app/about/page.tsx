@@ -38,7 +38,7 @@ export default function AboutPage() {
         breadcrumb="About Us"
         eyebrow="About NHA Sourcing"
         title="Your Success Is Our Business"
-        description="NHA Sourcing Industrial Co., Ltd. is a leading sourcing agent in China & Asia, dedicated to helping companies source products from China with the best quality, regulatory compliance, and at the lowest cost. Headquartered in Shanghai — China's biggest city and industrial hub."
+        description="NHA Sourcing Industrial Co., Ltd. is a leading sourcing agent in China & Asia, dedicated to helping companies source products from China & Asia with the best quality, regulatory compliance, and at the lowest cost. Headquartered in Shanghai — China's biggest city and industrial hub."
         primaryCta={{ text: 'Start Sourcing Today', href: '/contact' }}
         secondaryCta={{ text: 'View Our Services', href: '/services' }}
       />

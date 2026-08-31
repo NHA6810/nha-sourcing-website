@@ -60,7 +60,7 @@ export function HeroSection() {
 
             <p className="text-lg text-gray-300 mb-4 max-w-xl leading-relaxed">
               NHA Sourcing Industrial Co., Ltd. — a leading sourcing agent in China &amp; Asia,
-              dedicated to helping companies source products from China with the best
+              dedicated to helping companies source products from China &amp; Asia with the best
               quality, regulatory compliance, and at the lowest cost.
             </p>
 
@@ -115,7 +115,7 @@ export function HeroSection() {
                 <div className="w-full h-full rounded-xl overflow-hidden bg-gray-100 relative">
                   <Image
                     src="/images/products/product-banner.png"
-                    alt="NHA Sourcing - Quality industrial products sourced from China"
+                    alt="NHA Sourcing - Quality industrial products sourced from China & Asia"
                     fill
                     className="object-cover"
                   />

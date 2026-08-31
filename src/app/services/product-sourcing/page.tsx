@@ -27,7 +27,7 @@ export default function ProductSourcingPage() {
         breadcrumb="Services / Product Sourcing"
         eyebrow="Product Sourcing"
         title="Find the Best Products at the Best Prices"
-        description="Leverage our 500+ verified supplier network and on-the-ground expertise in China to source quality products at competitive prices. We handle everything from supplier identification to price negotiation."
+        description="Leverage our 500+ verified supplier network and on-the-ground expertise in China & Asia to source quality products at competitive prices. We handle everything from supplier identification to price negotiation."
         primaryCta={{ text: 'Get Sourcing Quote', href: '/contact' }}
         secondaryCta={{ text: 'All Services', href: '/services' }}
       />

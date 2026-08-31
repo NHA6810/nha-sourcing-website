@@ -16,7 +16,7 @@ import { Button } from '@/components/ui/button';
 export const metadata = {
   title: 'Factory Audit & Supplier Vetting Services',
   description:
-    'Thorough factory audits and supplier vetting services in China. Verify manufacturing capability, quality systems, compliance, and social responsibility with NHA Sourcing.',
+    'Thorough factory audits and supplier vetting services in China & Asia. Verify manufacturing capability, quality systems, compliance, and social responsibility with NHA Sourcing.',
 };
 
 const auditAreas = [
