@@ -49,26 +49,27 @@ const caseStudies = [
     ],
   },
   {
-    title: "Welding Equipment Quality Control Program",
-    client: "Chicago Pneumatic",
-    country: "Sweden / Global",
-    industry: "Industrial Tools",
-    category: "Quality Control",
-    duration: "Ongoing",
+    title: "European Beer Regulator Localization Project",
+    client: "European Beverage Equipment Co.",
+    country: "Germany / Europe",
+    industry: "Beverage & Industrial Equipment",
+    category: "OEM / ODM",
+    duration: "14 months",
     image: "/images/products/regulators.png",
     challenge:
-      "Global industrial tool brand faced inconsistent quality from multiple Chinese welding equipment manufacturers.",
+      "European beer equipment manufacturer needed to localize their CO2 pressure regulator production to Asia while maintaining EU PED (Pressure Equipment Directive) compliance and German engineering standards.",
     solution:
-      "Implemented end-to-end QC program: incoming material inspection, during-production checks, pre-shipment inspection, and functional testing.",
+      "Managed full localization: supplier identification, design transfer, tooling development, material certification, PED/CE compliance documentation, and production ramp-up with on-site QC.",
     results: [
-      "Defect rate dropped from 8% to 0.5%",
-      "Customer complaints reduced by 94%",
-      "Three underperforming factories replaced",
+      "Localized 8 regulator models for Asian production",
+      "All units passed PED 2014/68/EU certification",
+      "Unit cost reduced by 38% vs. European production",
+      "Zero quality issues in first 10,000 units",
     ],
     metrics: [
-      { label: "Defect Rate", value: "0.5%", icon: ShieldCheck },
-      { label: "QC Checks", value: "4/stage", icon: CheckCircle2 },
-      { label: "Factories", value: "8", icon: Factory },
+      { label: "Cost Saved", value: "38%", icon: DollarSign },
+      { label: "Models Localized", value: "8", icon: Award },
+      { label: "PED Certified", value: "100%", icon: ShieldCheck },
     ],
   },
   {
@@ -199,40 +200,29 @@ export default function CaseStudiesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => {
-              const isEven = index % 2 === 0;
               return (
                 <Card
                   key={index}
                   className="card-hover border-gray-200 overflow-hidden relative group"
                 >
-                  {/* Floating product image - corner placement */}
+                  {/* Floating product image - bottom right corner */}
                   {study.image && (
-                    <div
-                      className={`absolute z-10 w-36 h-28 md:w-40 md:h-32 rounded-xl shadow-lg overflow-hidden border-2 border-white transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl ${
-                        isEven
-                          ? "top-4 right-4 rotate-2"
-                          : "bottom-24 left-4 -rotate-2"
-                      }`}
-                    >
+                    <div className="absolute z-10 w-36 h-28 md:w-40 md:h-32 rounded-xl shadow-lg overflow-hidden border-2 border-white transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl bottom-16 right-6 -rotate-1">
                       <Image
                         src={study.image}
                         alt={study.title}
                         fill
-                        className="object-contain bg-gray-50 p-1"
+                        className="object-contain bg-white p-1"
                         sizes="160px"
                       />
                     </div>
                   )}
 
                   {/* Accent bar */}
-                  <div
-                    className={`absolute top-0 w-1.5 h-full ${
-                      isEven ? "left-0 bg-nha-green" : "right-0 bg-nha-magenta"
-                    }`}
-                  />
+                  <div className="absolute top-0 right-0 w-1.5 h-full bg-nha-green" />
 
                   <div
-                    className={`p-6 lg:p-8 ${isEven ? "pr-44" : "pl-44"}`}
+                    className="p-6 lg:p-8"
                   >
                     <div className="flex items-center gap-2 mb-4">
                       <Badge className="bg-nha-blue/10 text-nha-blue border-nha-blue/20">
