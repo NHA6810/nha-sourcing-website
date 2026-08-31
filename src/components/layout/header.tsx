@@ -86,11 +86,12 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 relative">
+            <div className="w-28 h-10 lg:w-32 lg:h-12 relative">
               <Image
                 src="/images/company/nha-logo.png"
                 alt="NHA Sourcing Logo"
                 fill
+                sizes="(max-width: 768px) 112px, 128px"
                 className="object-contain"
                 priority
               />
