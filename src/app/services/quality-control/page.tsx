@@ -17,7 +17,7 @@ import { Button } from '@/components/ui/button';
 export const metadata = {
   title: 'Quality Control & Inspection Services',
   description:
-    'Comprehensive quality control and inspection services in China & Asia. Pre-production, during production, and pre-shipment inspections by NHA Sourcing.',
+    'Comprehensive quality control and inspection services in China. Pre-production, during production, and pre-shipment inspections by NHA Sourcing.',
 };
 
 const inspectionTypes = [
