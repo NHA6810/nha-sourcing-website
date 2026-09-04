@@ -55,7 +55,8 @@ const caseStudies = [
     industry: "Beverage & Industrial Equipment",
     category: "OEM / ODM",
     duration: "14 months",
-    image: "/images/products/regulators.png",
+    image: "/images/company/factory-2.jpg",
+    featured: true,
     challenge:
       "European beer equipment manufacturer needed to localize their CO2 pressure regulator production to Asia while maintaining EU PED (Pressure Equipment Directive) compliance and German engineering standards.",
     solution:
@@ -203,10 +204,28 @@ export default function CaseStudiesPage() {
               return (
                 <Card
                   key={index}
-                  className="card-hover border-gray-200 overflow-hidden relative group"
+                  className={`card-hover border-gray-200 overflow-hidden relative group ${
+                    study.featured ? "md:col-span-2" : ""
+                  }`}
                 >
-                  {/* Floating product image - bottom right corner */}
-                  {study.image && (
+                  {/* Background image for featured cards */}
+                  {study.featured && study.image && (
+                    <div className="absolute inset-0 z-0">
+                      <Image
+                        src={study.image}
+                        alt={study.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 800px"
+                      />
+                      {/* Gradient overlay to make text readable */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white/70" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/50" />
+                    </div>
+                  )}
+
+                  {/* Floating product image - bottom right corner (non-featured cards only) */}
+                  {!study.featured && study.image && (
                     <div className="absolute z-10 w-36 h-28 md:w-40 md:h-32 rounded-xl shadow-lg overflow-hidden border-2 border-white transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl bottom-16 right-6 -rotate-1">
                       <Image
                         src={study.image}
@@ -222,7 +241,9 @@ export default function CaseStudiesPage() {
                   <div className="absolute top-0 right-0 w-1.5 h-full bg-nha-green" />
 
                   <div
-                    className="p-6 lg:p-8"
+                    className={`p-6 lg:p-8 relative z-10 ${
+                      study.featured ? "md:pr-96 min-h-[500px]" : ""
+                    }`}
                   >
                     <div className="flex items-center gap-2 mb-4">
                       <Badge className="bg-nha-blue/10 text-nha-blue border-nha-blue/20">
